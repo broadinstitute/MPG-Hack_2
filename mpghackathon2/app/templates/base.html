@@ -1,0 +1,46 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - InstaProtocol YelpHub</title>
+    {% else %}
+    <title>InstaProtocol YelpHub</title>
+    {% endif %}
+  
+ 
+    <!-- Bootstrap core CSS -->
+<!--
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+-->
+    <!-- Custom styles for this template -->
+ <link href="../static/css/cover.css" rel="stylesheet">
+<!--
+<link href="../static/css/jumbotron-narrow.css" rel="stylesheet">
+ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<div> 
+This Site Uses Cookies 🍪 InstaProtocol YelpHub   
+ <a href="/">Home</a>
+ <a href="/submit">Submit</a>
+ <a href="/directory">Directory</a>
+
+
+</div>
+    <hr>
+<!--
+<div class="jumbotron">
+-->
+<div class="cover">
+    {% block content %}{% endblock %}
+</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../static/js/jquery.min.js"><\/script>')</script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../static/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <hr>
+  {% for p in protocols %}
+  <h2><a href="{{ "protocol/" ~ p.id }}"> {{ p.title }} </a> </h2>
+  <p>
+    {{ ' '.join(p.protocol_description.split(' ',4)[:4]) }}...
+  </p>
+  {% endfor %}
+{% endblock %}

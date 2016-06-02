@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+ <h1>Submit</h1>
+  <form action="{{ request.path }}" method="POST" name="protocol_submit">
+      {{ form.hidden_tag() }}
+      <p>
+          Title:<br>
+          {{ form.title(size=64) }}<br>
+      </p>
+      <p>
+       Choose category of Protocol
+      </p>
+      <select name="cars">
+        <option value="RNA">RNA Protocol</option>
+        <option value="DNA">DNA Protocol</option>
+        <option value="Protien">Protein Protocol</option>
+        <option value="Others">Others</option>
+      </select>
+      <p> Protocol<br> {{ form.bodytext(cols="64", rows="35")|safe}}</p>
+     
+      
+       <input type = "submit" value =  "Submit" />
+  </form>
+{% endblock %}
